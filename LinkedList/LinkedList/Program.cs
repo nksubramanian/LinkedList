@@ -23,6 +23,8 @@
             Console.WriteLine("********************Reversed*******************");
             linkedListImp.PrintAll();
             Console.WriteLine("Hello, World!");
+            linkedListImp.PrintReverse();
+
         }
     }
 }

@@ -178,7 +178,35 @@ namespace LinkedList
 
             }
             _head = newHead;
+        }
 
+
+        private void PrintReverse(Node x)
+        {
+
+            if(x._next is null)
+            {
+                Console.WriteLine(x._value);
+            }
+            else
+            {
+                PrintReverse(x._next);
+                Console.WriteLine(x._value);
+            }
+
+        }
+
+
+        public void PrintReverse()
+        {
+            if(_head is null)
+            {
+                Console.WriteLine("Head is null");
+            }
+            else
+            {
+                this.PrintReverse(this._head);
+            }
 
         }
     }
