@@ -126,5 +126,33 @@ namespace LinkedList
             return false;
 
         }
+
+        public int GetLastNode()
+        {
+            Node iter = _head;
+            while (iter._next != null)
+            {
+                iter = iter._next;
+            }
+            return iter._value;
+        }
+
+        public int GetLastNode(int i)
+        {
+            int count = 0;
+            Node res = _head;
+            Node iter = _head;
+            while (iter != null)
+            {
+                count++;
+                if (count > i+1)
+                {
+                    res = res._next;
+                }
+
+                iter = iter._next;
+            }
+            return res._value;
+        }
     }
 }
