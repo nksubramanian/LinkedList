@@ -98,5 +98,33 @@ namespace LinkedList
 
         }
 
+
+        public int GetLength()
+        {
+            Node iter = _head;
+            int count = 0;
+            while(iter!=null)
+            {
+                count++;
+                iter = iter._next;
+            }
+            return count;
+
+        }
+
+        public bool IsKeyExists(int value)
+        {
+            var iter = _head;
+            while(iter != null)
+            {
+                if(iter._value == value)
+                {
+                    return true;
+                }
+                iter = iter._next;
+            }
+            return false;
+
+        }
     }
 }
