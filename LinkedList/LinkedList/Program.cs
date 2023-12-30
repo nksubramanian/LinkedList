@@ -11,6 +11,9 @@
             linkedListImp.AddNodeAtBeginning(0);
             linkedListImp.AddNodeAtBeginning(-1);
             linkedListImp.PrintAll();
+            linkedListImp.DeleteNodeAtBeginning();
+            Console.WriteLine("********************");
+            linkedListImp.PrintAll();
             Console.WriteLine("Hello, World!");
         }
     }

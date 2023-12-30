@@ -66,5 +66,37 @@ namespace LinkedList
             }
         }
 
+        public void DeleteNodeAtEnd()
+        {
+            if ( _head is null)
+            {
+                throw new Exception("there are no nodes");
+            }
+
+            if(_head._next is null)
+            {
+                _head = null;
+                return;
+            }
+            var iter = _head;
+            while(iter._next._next != null)
+            {
+                iter = iter._next;
+            }
+
+            iter._next = null;
+
+        }
+
+        public void DeleteNodeAtBeginning()
+        {
+            if (_head is null)
+            {
+                throw new Exception("there are no nodes");
+            }
+            _head = _head._next;
+
+        }
+
     }
 }
