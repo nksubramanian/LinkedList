@@ -14,7 +14,7 @@
 
 
              bool res = linkedListImp.IsPalindrome();
-            Console.WriteLine("gggggggggggg");
+            Console.WriteLine(res);
 
         }
     }

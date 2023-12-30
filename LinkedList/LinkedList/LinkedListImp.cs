@@ -210,34 +210,34 @@ namespace LinkedList
 
         }
 
-        private Node _headduplicateref;
-        public bool CompareWith(Node x)
-        {
-            if (x._next is null)
-            {
-                bool res = (x._value == _headduplicateref._value);
-                _headduplicateref = _headduplicateref._next;
-                return res;
-            }
-            else
-            {
-                Node y = x;
-                bool i = CompareWith(y._next);
-                bool z = (x._value == _headduplicateref._value);
-                _headduplicateref = _headduplicateref._next;
-                return i & z;
-            }
-        }
+
+
 
         public bool IsPalindrome()
         {
-            _headduplicateref  = _head;
             if (_head is null)
             {
                 throw new Exception("Head is null");
             }
-            return this.CompareWith(this._head);
-  
+            Node _headduplicateref = _head;
+            bool CompareWith(Node x)
+            {
+                if (x._next is null)
+                {
+                    bool res = (x._value == _headduplicateref._value);
+                    _headduplicateref = _headduplicateref._next;
+                    return res;
+                }
+                else
+                {
+                    Node y = x;
+                    bool i = CompareWith(y._next);
+                    bool z = (x._value == _headduplicateref._value);
+                    _headduplicateref = _headduplicateref._next;
+                    return i & z;
+                }
+            }
+            return CompareWith(this._head);  
 
         }
     }
