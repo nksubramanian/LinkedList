@@ -154,5 +154,32 @@ namespace LinkedList
             }
             return res._value;
         }
+
+
+        public void Reverse()
+        {
+            Node newHead = null;
+            while (_head != null) 
+            {
+
+                if (newHead is null)
+                {
+                    newHead = _head;
+                    _head = _head._next;
+                    newHead._next = null;
+                }
+                else
+                {
+                    var temp = newHead;
+                    newHead = _head;
+                    _head = _head._next;
+                    newHead._next = temp;
+                }
+
+            }
+            _head = newHead;
+
+
+        }
     }
 }

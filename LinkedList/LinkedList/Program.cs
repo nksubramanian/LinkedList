@@ -19,6 +19,9 @@
             //Console.WriteLine($"Does 3 exist "+linkedListImp.IsKeyExists(3));
             //Console.WriteLine($"Does 50 exist " + linkedListImp.IsKeyExists(50));
             Console.WriteLine("Last node "+linkedListImp.GetLastNode(2));
+            linkedListImp.Reverse();
+            Console.WriteLine("********************Reversed*******************");
+            linkedListImp.PrintAll();
             Console.WriteLine("Hello, World!");
         }
     }
